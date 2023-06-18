@@ -1,6 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 	
+	<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+	<%@ page isELIgnored = "false" %>
+
 
 <!DOCTYPE html>
 <html>
@@ -21,7 +24,15 @@
 							<i class="fa-solid fa-book-open-reader"></i> Login
 						</h2>
 						
+						<c:if test="${not empty succMsg }">
+							<p class="text-center text-success">${succMsg }</p>
+							<c:remove var="succMsg"/>
+						</c:if>
 						
+						<c:if test="${not empty failedMsg }">
+							<p class="text-center text-danger">${failedMsg }</p>
+							<c:remove var="failedMsg"/>
+						</c:if>
 						
 
 						<form action="login" method="post">

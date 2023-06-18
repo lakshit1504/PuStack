@@ -19,7 +19,10 @@
 							<h3>Add Book</h3>
 						</div>
 
-						<form action="register" method="post">
+						<form action="../booksAdd" method="post"
+							enctype="multipart/form-data">
+
+
 							<div class="form-group">
 								<label for="exampleInputBName">Book Name</label> <input
 									type="text" class="form-control" id="exampleInputbname"
@@ -44,7 +47,7 @@
 							<div class="form-group">
 								<label for="exampleInputCategory">Book Category</label> <select
 									class="form-control" id="inputtype" required="required"
-									name="btype">
+									name="Categories">
 									<option selected>--select--</option>
 									<option value="New">New Book</option>
 								</select>
@@ -53,7 +56,7 @@
 							<div class="form-group">
 								<label for="exampleInputPassword1">Book Status</label> <select
 									class="form-control" id="inputstatus" required="required"
-									name="bstatus">
+									name="status">
 
 									<option selected>--select--</option>
 									<option value="Active">Active</option>
