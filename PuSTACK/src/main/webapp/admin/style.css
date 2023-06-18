@@ -1,0 +1,29 @@
+.bg-custom{
+	background-color: #400080;
+}
+
+.navbar .nav-item:hover .nav-link{
+	color:black;
+	background-color:white;
+	border-radius:20px;
+}
+
+.back-img{
+	background:url("../image/images.jpeg");
+	height:50vh;
+	width:100%;
+	background-size:cover;
+	background-repeat:no-repeat;
+}
+.card-bg:hover{
+	background-color:#e3e3e3;
+}
+.btn-custom{
+		background-color: #400080;
+		color:white;
+		
+		&:hover{
+			color:#e3e3e3;
+			background-color:#240048;
+		}
+}
