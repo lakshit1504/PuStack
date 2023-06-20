@@ -1,13 +1,22 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	
+	<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+	<%@ page isELIgnored = "false" %>
+
+	
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Admin : add books</title>
 <%@include file="allCss.jsp"%>
+
 </head>
 <body style="background-color: #e3e3e3;">
+<c:if test="${empty userobj }">
+		<c:redirect url="../Login.jsp"/>
+	</c:if>
 	<%@include file="navbar.jsp"%>
 
 	<div class="container">
@@ -18,6 +27,16 @@
 						<div class="text-center">
 							<h3>Add Book</h3>
 						</div>
+						
+							<c:if test="${not empty succMsg }">
+							<p class="text-center text-success">${succMsg }</p>
+								<c:remove var="succMsg"/>
+							</c:if>
+							
+							<c:if test="${not empty failedMsg }">
+								<p class="text-center text-danger">${failedMsg }</p>
+								<c:remove var="failedMsg"/>
+							</c:if>
 
 						<form action="../booksAdd" method="post"
 							enctype="multipart/form-data">
@@ -47,7 +66,7 @@
 							<div class="form-group">
 								<label for="exampleInputCategory">Book Category</label> <select
 									class="form-control" id="inputtype" required="required"
-									name="Categories">
+									name="categories">
 									<option selected>--select--</option>
 									<option value="New">New Book</option>
 								</select>

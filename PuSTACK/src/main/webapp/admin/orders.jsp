@@ -1,5 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	
+	<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ page isELIgnored="false"%>
+	
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,6 +12,9 @@
 <%@include file="allCss.jsp"%>
 </head>
 <body style="background-color:#e3e3e3">
+<c:if test="${empty userobj }">
+		<c:redirect url="../Login.jsp"/>
+	</c:if>
 	<%@include file="navbar.jsp"%>
 
 	

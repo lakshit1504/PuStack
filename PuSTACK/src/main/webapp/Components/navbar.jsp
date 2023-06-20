@@ -38,12 +38,12 @@
 		<ul class="navbar-nav mr-auto">
 			<li class="nav-item active"><a class="nav-link" href="index.jsp">Home <span class="sr-only">(current)</span>
 			</a></li>
-			<li class="nav-item active"><a class="nav-link" href="#">Recent
+			<li class="nav-item active"><a class="nav-link" href="all_recent_books.jsp">Recent
 					Books</a></li>
-			<li class="nav-item active"><a class="nav-link" href="#">New
+			<li class="nav-item active"><a class="nav-link" href="all_new_books.jsp">New
 					Books</a></li>
 
-			<li class="nav-item active"><a class="nav-link " href="#">Old
+			<li class="nav-item active"><a class="nav-link " href="all_old_books.jsp">Old
 					Books</a></li>
 		</ul>
 		<form class="form-inline my-2 my-lg-0">
