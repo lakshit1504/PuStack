@@ -59,7 +59,7 @@
 				<%
 					if("Old".equals(b.getBookCategory())){
 				%>
-						<a href="#" class="btn btn-primary"><i class="fas fa-cart-plus"></i> Continue Shopping</a>
+						<a href="index.jsp" class="btn btn-primary"><i class="fas fa-cart-plus"></i> Continue Shopping</a>
 				<%}else{ %>
 					<a href="" class="btn btn-primary"><i class="fas fa-cart-plus"></i> Add to Cart</a>
 					<%} %>
