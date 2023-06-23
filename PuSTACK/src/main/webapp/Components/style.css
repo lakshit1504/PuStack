@@ -4,10 +4,14 @@
   font-family: sans-serif;
 }
 
-
+button{
+	background-color: #400080;
+	color:white;
+}
 
 .bg-custom{
 	background-color: #400080;
+	
 }
 
 .navbar .nav-item:hover .nav-link{
@@ -17,7 +21,7 @@
 }
 
 .back-img{
-	background:url("../image/images.jpeg");
+	background:url("../image/image.jpg");
 	height:50vh;
 	width:100%;
 	background-size:cover;

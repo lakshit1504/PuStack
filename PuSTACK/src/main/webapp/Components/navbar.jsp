@@ -100,9 +100,9 @@
 				href="all_old_books.jsp">Old Books</a></li>
 		</ul>
 		<form class="form-inline my-2 my-lg-0">
-			<button class="btn btn-light mx-2 my-2 my-sm-0" type="submit">Setting</button>
-			<button class="btn btn-light mx-2 my-2 my-sm-0" type="submit">Contact
-				Us</button>
+			<a href="setting.jsp" class="btn btn-light mx-2 my-2 my-sm-0" type="submit">Setting</a>
+			<a class="btn btn-light mx-2 my-2 my-sm-0" type="submit">Contact
+				Us</a>
 		</form>
 	</div>
 </nav>

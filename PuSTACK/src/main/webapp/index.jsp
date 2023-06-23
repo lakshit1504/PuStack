@@ -30,15 +30,15 @@
 
 
 	<div class="container-fluid back-img">
-		<h2 class="text-center text-dark">
-			<i class="fa-solid fa-award"></i> India's No.1 Online Book Bazaar
-		</h2>
+		<h1 class="text-center  text-warning" style="padding:20vh;">
+			<i class="fa-solid fa-award "></i> India's No.1 Online Book Bazaar
+		</h1>
 	</div>
 
 
 
 	<!-- recent books -->
-	<div class="container">
+	<div class="mx-5 p-2">
 		<h3 class="text-center my-3">Recent Books</h3>
 		<div class="row">
 			<!-- card-->
@@ -64,20 +64,20 @@
 							<%
 							if (u == null) {
 							%>
-							<a href="Login.jsp" class="btn btn-sm btn-custom ml-4">Add
+							<a href="Login.jsp" class="btn btn-sm btn-custom ml-5">Add
 								Cart</a>
 							<%
 							} else {
 							%>
 							<a href="cart?bid=<%=b.getBookId()%>&&uid=<%=u.getId()%>"
-								class="btn btn-sm btn-custom	ml-4">Add Cart</a>
+								class="btn btn-sm btn-custom	ml-5">Add Cart</a>
 
 							<%
 							}
 							%>
 							<a href="view_books.jsp?bid=<%=b.getBookId()%>"
-								class="btn btn-sm btn-success ml-2">View</a> <a href=""
-								class="btn btn-sm btn-custom	ml-2 "><%=b.getPrice()%> <i
+								class="btn btn-sm btn-success ml-3">View</a> <a href=""
+								class="btn btn-sm btn-custom	ml-3 "><%=b.getPrice()%> <i
 								class="fa-solid fa-indian-rupee-sign"></i></a>
 						</div>
 
@@ -90,7 +90,7 @@
 
 							<a href="view_books.jsp?bid=<%=b.getBookId()%>"
 								class="btn btn-sm btn-success ml-5">View Details</a> <a href=""
-								class="btn btn-sm btn-custom ml-3"><%=b.getPrice()%> <i
+								class="btn btn-sm btn-custom ml-5"><%=b.getPrice()%> <i
 								class="fa-solid fa-indian-rupee-sign"></i></a>
 						</div>
 						<%
@@ -113,7 +113,7 @@
 		</div>
 
 		<!-- New books -->
-		<div class="container my-5">
+		<div class=" my-5">
 			<h3 class="text-center my-3">New Books</h3>
 			<div class="row">
 
@@ -138,21 +138,21 @@
 								<%
 								if (u == null) {
 								%>
-								<a href="Login.jsp" class="btn btn-sm btn-custom ml-4">Add
+								<a href="Login.jsp" class="btn btn-sm btn-custom ml-5">Add
 									Cart</a>
 								<%
 								} else {
 								%>
 								<a href="cart?bid=<%=b.getBookId()%>&&uid=<%=u.getId()%>"
-									class="btn btn-sm btn-custom	ml-4">Add Cart</a>
+									class="btn btn-sm btn-custom	ml-5">Add Cart</a>
 
 								<%
 								}
 								%>
 
 								<a href="view_books.jsp?bid=<%=b.getBookId()%>"
-									class="btn btn-sm btn-success ml-2">View</a> <a href=""
-									class="btn btn-sm btn-custom	ml-2 "><%=b.getPrice()%> <i
+									class="btn btn-sm btn-success ml-3">View</a> <a href=""
+									class="btn btn-sm btn-custom	ml-3 "><%=b.getPrice()%> <i
 									class="fa-solid fa-indian-rupee-sign"></i></a>
 							</div>
 						</div>
@@ -170,7 +170,7 @@
 			</div>
 
 			<!-- Old books -->
-			<div class="container my-5">
+			<div class=" my-5">
 				<h3 class="text-center my-3">Old Books</h3>
 				<div class="row">
 					<!-- card-->
@@ -190,7 +190,7 @@
 								<div class="row">
 									<a href="view_books.jsp?bid=<%=b.getBookId()%>"
 										class="btn btn-sm btn-success ml-5">View Detail</a> <a href=""
-										class="btn btn-sm btn-custom	ml-1 "><%=b.getPrice()%> <i
+										class="btn btn-sm btn-custom	ml-5 "><%=b.getPrice()%> <i
 										class="fa-solid fa-indian-rupee-sign"></i></a>
 								</div>
 							</div>

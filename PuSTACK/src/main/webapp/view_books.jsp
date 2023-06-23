@@ -1,24 +1,31 @@
+<%@page import="com.entity.User"%>
 <%@page import="com.entity.BookDtls"%>
 <%@page import="com.DB.DBConnect"%>
 <%@page import="com.DAO.BookDAOImpl"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+	<%@ page isELIgnored = "false" %>
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-<%@include file="/Components/allCss.jsp"%>
-</head>
-<body style="background-color:#f1f2f3">
-	<%@include file="Components/navbar.jsp"%>
-	
 	<%
 		int bid=Integer.parseInt(request.getParameter("bid"));
 	
 		BookDAOImpl dao= new BookDAOImpl(DBConnect.getConn());
 		BookDtls b= dao.getBookById(bid);
+	User u = (User) session.getAttribute("userobj");
 	%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title><%=b.getBookName()%> : Details</title>
+<%@include file="/Components/allCss.jsp"%>
+</head>
+<body style="background-color:#f1f2f3">
+	<%@include file="Components/navbar.jsp"%>
+	
+	
+	
 	
 	
 	<div class="container p-5">
@@ -61,7 +68,18 @@
 				%>
 						<a href="index.jsp" class="btn btn-primary"><i class="fas fa-cart-plus"></i> Continue Shopping</a>
 				<%}else{ %>
-					<a href="" class="btn btn-primary"><i class="fas fa-cart-plus"></i> Add to Cart</a>
+					<%
+							if (u == null) {
+							%>
+							<a href="Login.jsp" class="btn btn-primary"><i class="fas fa-cart-plus"></i> Add to Cart</a>
+							<%
+							} else {
+							%>
+							<a href="cart?bid=<%=b.getBookId()%>&&uid=<%=u.getId()%>" class="btn btn-primary"><i class="fas fa-cart-plus"></i> Add to Cart</a>
+
+							<%
+							}
+							%>
 					<%} %>
 					<a href="" class="btn btn-danger"><i class="fa-solid fa-indian-rupee-sign"></i><%=b.getPrice()%></a>
 				</div>	
@@ -70,3 +88,4 @@
 </div>
 </body>
 </html>
+

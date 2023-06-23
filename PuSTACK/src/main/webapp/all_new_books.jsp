@@ -54,7 +54,7 @@
 			<div class="col-md-3 my-4">
 				<div class="card card-bg">
 					<div class="card-body text-center">
-						<img alt="" src="books/<%=b.getPhotoName()%>" width="150px"
+						<img alt="Book Image" src="books/<%=b.getPhotoName()%>" width="150px"
 							height="200px">
 						<p><%=b.getBookName()%></p>
 						<p><%=b.getAuthor()%></p>
