@@ -13,9 +13,9 @@
 		</div>
 		<div class="col-md-5">
 
-			<form class="form-inline my-2 my-lg-0">
+			<form class="form-inline my-2 my-lg-0" action="search.jsp" method="post">
 				<input class="form-control mr-sm-2" type="search"
-					placeholder="Search" aria-label="Search">
+					placeholder="Search" aria-label="Search" name="ch">
 				<button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
 			</form>
 
