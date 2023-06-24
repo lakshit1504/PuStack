@@ -63,26 +63,16 @@
 						<a href="edit_profile.jsp">
 							<div class="card-body">
 								<i class="fa-solid fa-user fa-5x"></i>
-								<h3 class="mt-3">Login and Security</h3>
+								<h3 class="mt-3">Edit Profile</h3>
 								
 							</div>
 						</a>
 					</div>
 				</div>
 				
-				<div class="col-md-4 mt-4">
-					<div class="card">
-						<a href="user_address.jsp">
-							<div class="card-body">
-								<i class="fa-solid fa-location-dot fa-5x"></i>
-								<h3 class="mt-3">Your Address</h3>
-								<h6>Edit Address</h6>
-							</div>
-						</a>
-					</div>
-				</div>
 				
-				<div class="col-md-4 mt-4">
+				
+				<div class="col-md-6 mt-4">
 					<div class="card">
 						<a href="order.jsp">
 							<div class="card-body">
@@ -94,7 +84,7 @@
 					</div>
 				</div>
 				
-				<div class="col-md-4 mt-4">
+				<div class="col-md-6 mt-4">
 					<div class="card">
 						<a href="helpline.jsp">
 							<div class="card-body">

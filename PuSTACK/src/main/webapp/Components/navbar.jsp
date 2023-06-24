@@ -11,7 +11,7 @@
 				<i class="fa-solid fa-book-open-reader"></i> PuStack
 			</h3>
 		</div>
-		<div class="col-md-6">
+		<div class="col-md-5">
 
 			<form class="form-inline my-2 my-lg-0">
 				<input class="form-control mr-sm-2" type="search"
@@ -21,8 +21,8 @@
 
 		</div>
 
-		<div class="col-md-3">
-			<c:if test="${not empty userobj }">
+		<div class="col-md-4">
+			<c:if test="${not empty userobj}">
 				<a href="#" class="btn btn-success"><i class="fa-solid fa-user"></i>
 					${userobj.name}</a>
 

@@ -1,5 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+	<%@ page isELIgnored = "false" %>
+	
+	
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,6 +14,11 @@
 
 </head>
 <body style="background-color: #f0f1f2;">
+<c:if test="${empty userobj}">
+		<c:redirect url="Login.jsp"></c:redirect>
+			
+	</c:if>
+
 	<%@include file="Components/navbar.jsp"%>
 		
 		<div class="container ">
@@ -20,26 +30,37 @@
 							<i class="fa-solid fa-book-open-reader"></i> Update Profile
 						</h3>
 						
-						<form action="register" method="post">
+						<c:if test="${not empty succMsg }">
+							<p class="text-center text-success">${succMsg }</p>
+								<c:remove var="succMsg"/>
+							</c:if>
+							
+							<c:if test="${not empty failedMsg }">
+								<p class="text-center text-danger">${failedMsg }</p>
+								<c:remove var="failedMsg"/>
+							</c:if>
+						
+						<form action="profile_update" method="post">
+						<input type="hidden" value="${userobj.id}" name="id" >
 							<div class="form-group">
 								<label for="exampleInputEmail1">Name</label> <input type="text"
 									class="form-control" id="exampleInputEmail11"
 									aria-describedby="emailHelp" placeholder="Enter name"
-									required="required" name="fname" >
+									required="required" name="fname" value="${userobj.name }">
 
 							</div>
 							<div class="form-group">
 								<label for="exampleInputEmail1">Email address</label> <input
 									type="email" class="form-control" id="exampleInputEmail11"
 									aria-describedby="emailHelp" placeholder="Enter email"
-									required="required" name="email">
+									required="required" name="email" value="${userobj.email}">
 
 							</div>
 							<div class="form-group">
 								<label for="exampleInputEmail1">Phone Number</label> <input
 									type="number" class="form-control" id="exampleInputEmail11"
 									aria-describedby="emailHelp" placeholder="Enter Mobile"
-									required="required" name="phno">
+									required="required" name="phno" value="${userobj.phno}">
 
 							</div>
 							<div class="form-group">

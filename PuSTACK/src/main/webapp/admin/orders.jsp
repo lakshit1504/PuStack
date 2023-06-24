@@ -1,3 +1,8 @@
+<%@page import="com.entity.Book_order"%>
+<%@page import="java.util.List"%>
+<%@page import="com.DB.DBConnect"%>
+<%@page import="com.DAO.BookOrderImpl"%>
+<%@page import="com.entity.User"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 	
@@ -26,7 +31,7 @@
 					<th scope="col">Order ID</th>
 					<th scope="col">Customer Name</th>
 					<th scope="col">Email</th>
-					<th scope="col">Adress</th>
+					<th scope="col">Address</th>
 					<th scope="col">Phone No.</th>
 					<th scope="col">Book</th>
 					<th scope="col">Author</th>
@@ -35,42 +40,27 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr>
-					<th scope="row">1</th>
-					<td>Mark</td>
-					<td>Otto</td>
-					<td>@mdo</td>
-					<td>the Bird</td>
-					<td>@twitter</td>
-					<td>@mdo</td>
-					<td>the Bird</td>
-					<td>@twitter</td>
+			<% 
+					User u=(User)session.getAttribute("userobj");	
+					BookOrderImpl dao=new BookOrderImpl(DBConnect.getConn());
+					List<Book_order> blist=dao.getBook();
 					
-				</tr>
-				<tr>
-					<th scope="row">2</th>
-					<td>Jacob</td>
-					<td>Thornton</td>
-					<td>@fat</td>
-					<td>the Bird</td>
-					<td>@twitter</td>
-					<td>@mdo</td>
-					<td>the Bird</td>
-					<td>@twitter</td>
 					
+					for(Book_order b: blist){
+				%>
+					<tr>
+					<th scope="row"><%=b.getOrderId() %></th>
+					<td><%=b.getUserName() %></td>
+					<td><%=b.getEmail() %></td>
+					<td><%=b.getFullAdd() %></td>
+					<td><%=b.getPhno() %></td>
+					<td><%=b.getBookName() %></td>
+					<td><%=b.getAuthor() %></td>
+					<td><%=b.getPrice() %></td>
+					<td><%=b.getPaymentType() %></td>
 				</tr>
-				<tr>
-					<th scope="row">3</th>
-					<td>Larry</td>
-					<td>the Bird</td>
-					<td>@twitter</td>
-					<td>the Bird</td>
-					<td>@twitter</td>
-					<td>@mdo</td>
-					<td>the Bird</td>
-					<td>@twitter</td>
-					
-				</tr>
+				<%} %>
+				
 			</tbody>
 		</table>
 
